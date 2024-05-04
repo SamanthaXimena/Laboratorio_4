@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_geo">
+    <fragment
+        android:id="@+id/fragment_geo"
+        android:name="com.example.laboratorio_4.Fragments.Fragment_geo"
+        android:label="fragment_geo"
+        tools:layout="@layout/fragment_geo" >
+        <action
+            android:id="@+id/action_fragment_geo_to_fragment_clim2"
+            app:destination="@id/fragment_clim" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_clim"
+        android:name="com.example.laboratorio_4.Fragments.Fragment_clim"
+        android:label="fragment_clim"
+        tools:layout="@layout/fragment_clim" >
+        <action
+            android:id="@+id/action_fragment_clim_to_fragment_geo"
+            app:destination="@id/fragment_geo" />
+    </fragment>
+</navigation>
