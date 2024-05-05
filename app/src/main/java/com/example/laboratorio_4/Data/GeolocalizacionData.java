@@ -1,23 +1,27 @@
 package com.example.laboratorio_4.Data;
 
 public class GeolocalizacionData {
-    private String nombre_ciudad_geo;
-    private String latitud_ciudad;
-    private String longitud_ciudad;
+     String state;
+     Double lat, lon;
 
-    public String getNombre_ciudad_geo() {
-        return nombre_ciudad_geo;
+
+    public GeolocalizacionData(String state, Double lat, Double lon) {
+        this.state = state;
+        this.lat = lat;
+        this.lon = lon;
     }
 
-    public String getLatitud_ciudad() {
-        return latitud_ciudad;
+
+
+    public String getState() {
+        return state;
     }
 
-    public String getLongitud_ciudad() {
-        return longitud_ciudad;
+    public Double getLat() {
+        return lat;
     }
 
-    public GeolocalizacionData(String nombre_ciudad_geo) {
-        this.nombre_ciudad_geo = nombre_ciudad_geo;
+    public Double getLon() {
+        return lon;
     }
 }

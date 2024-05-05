@@ -3,23 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragment_geo">
+    app:startDestination="@id/geolocalizacionFragment">
+
+
     <fragment
-        android:id="@+id/fragment_geo"
-        android:name="com.example.laboratorio_4.Fragments.Fragment_geo"
-        android:label="fragment_geo"
-        tools:layout="@layout/fragment_geo" >
+        android:id="@+id/geolocalizacionFragment"
+        android:name="com.example.laboratorio_4.GeolocalizacionFragment"
+        android:label="fragment_geolocalizacion"
+        tools:layout="@layout/fragment_geolocalizacion" >
         <action
-            android:id="@+id/action_fragment_geo_to_fragment_clim2"
-            app:destination="@id/fragment_clim" />
+            android:id="@+id/action_geolocalizacionFragment_to_climaFragment"
+            app:destination="@id/climaFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
     </fragment>
     <fragment
-        android:id="@+id/fragment_clim"
-        android:name="com.example.laboratorio_4.Fragments.Fragment_clim"
-        android:label="fragment_clim"
-        tools:layout="@layout/fragment_clim" >
+        android:id="@+id/climaFragment"
+        app:enterAnim="@anim/enter_anim"
+        app:exitAnim="@anim/exit_anim"
+        android:name="com.example.laboratorio_4.ClimaFragment"
+        android:label="fragment_clima"
+        tools:layout="@layout/fragment_clima" >
         <action
-            android:id="@+id/action_fragment_clim_to_fragment_geo"
-            app:destination="@id/fragment_geo" />
+            android:id="@+id/action_climaFragment_to_geolocalizacionFragment"
+            app:destination="@id/geolocalizacionFragment" />
     </fragment>
 </navigation>

@@ -20,7 +20,7 @@ public class ClimaActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_clim);
+        setContentView(R.layout.fragment_clima);
 
         recyclerView = findViewById(R.id.recycler_view_clima);
 

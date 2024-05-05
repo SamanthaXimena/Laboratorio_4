@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/geo_buttom"
+        android:title="Geolocalizacion"
+        android:icon="@drawable/baseline_location_on_24"/>
+    <item
+        android:id="@+id/clima_buttom"
+        android:title="Clima"
+        android:icon="@drawable/baseline_cloudy_snowing_24"/>
+</menu>
