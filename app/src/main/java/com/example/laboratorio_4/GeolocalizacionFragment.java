@@ -31,13 +31,14 @@ public class GeolocalizacionFragment extends Fragment {
     private RecyclerView recyclerView;
     private List<GeolocalizacionData> geolocalizacionData_List = new ArrayList<>();
     private GeolocalizacionAdapter adapter;
-    private ApiService apiService;
+    private ApiService_geo apiServiceGeo;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         binding = FragmentGeolocalizacionBinding.inflate(inflater, container, false);
+
         View view = binding.getRoot();
 
         // Inicializar RecyclerView
@@ -48,14 +49,14 @@ public class GeolocalizacionFragment extends Fragment {
         // Inicializar Retrofit y crear una instancia de la interfaz de servicio
         String baseUrl = "https://api.openweathermap.org/";
 
-        apiService = RetrofitClient.getClient(baseUrl).create(ApiService.class);
+        apiServiceGeo = RetrofitClient.getClient(baseUrl).create(ApiService_geo.class);
 
         // Realizar la solicitud a la API
         String location = "Lima";
         int limit = 1;
         String apiKey = "8dd6fc3be19ceb8601c2c3e811c16cf1";
 
-        Call<List<GeolocalizacionData>> call = apiService.getData(location, limit, apiKey);
+        Call<List<GeolocalizacionData>> call = apiServiceGeo.getData(location, limit, apiKey);
         call.enqueue(new Callback<List<GeolocalizacionData>>() {
 
 

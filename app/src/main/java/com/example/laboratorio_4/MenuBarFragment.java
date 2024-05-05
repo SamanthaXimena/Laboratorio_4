@@ -7,16 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.laboratorio_4.AppActivity.ClimaActivity;
-import com.example.laboratorio_4.AppActivity.GeolocalizacionActivity;
+import com.example.laboratorio_4.Activity.ClimaActivity;
+import com.example.laboratorio_4.Activity.GeolocalizacionActivity;
 
 public class MenuBarFragment extends Fragment {
 

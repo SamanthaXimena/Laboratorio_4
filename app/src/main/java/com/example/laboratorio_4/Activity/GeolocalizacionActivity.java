@@ -1,4 +1,4 @@
-package com.example.laboratorio_4.AppActivity;
+package com.example.laboratorio_4.Activity;
 
 import android.os.Bundle;
 

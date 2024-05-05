@@ -8,7 +8,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface ApiService {
+public interface ApiService_geo {
     @GET("geo/1.0/direct")
     Call<List<GeolocalizacionData>> getData(
             @Query("q") String location,
